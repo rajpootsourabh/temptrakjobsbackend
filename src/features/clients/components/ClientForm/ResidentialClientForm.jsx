@@ -50,27 +50,27 @@ const ResidentialClientForm = ({ formik }) => {
 
         <Grid item xs={12} md={6}>
           <DebouncedTextField
-            name="residential_email"
+            name="email_address"  // Changed from residential_email to common field
             label="Email Address"
             type="email"
-            value={formik.values.residential_email}
-            onChange={(value) => formik.setFieldValue('residential_email', value)}
+            value={formik.values.email_address}
+            onChange={(value) => formik.setFieldValue('email_address', value)}
             onBlur={formik.handleBlur}
-            error={formik.touched.residential_email && formik.errors.residential_email}
-            helperText={formik.touched.residential_email && formik.errors.residential_email}
+            error={formik.touched.email_address && formik.errors.email_address}
+            helperText={formik.touched.email_address && formik.errors.email_address}
             fullWidth
           />
         </Grid>
 
         <Grid item xs={12} md={6}>
           <DebouncedTextField
-            name="residential_mobile"
+            name="mobile_number"  // Changed from residential_mobile to common field
             label="Mobile Number"
-            value={formik.values.residential_mobile}
-            onChange={(value) => formik.setFieldValue('residential_mobile', value)}
+            value={formik.values.mobile_number}
+            onChange={(value) => formik.setFieldValue('mobile_number', value)}
             onBlur={formik.handleBlur}
-            error={formik.touched.residential_mobile && formik.errors.residential_mobile}
-            helperText={formik.touched.residential_mobile && formik.errors.residential_mobile}
+            error={formik.touched.mobile_number && formik.errors.mobile_number}
+            helperText={formik.touched.mobile_number && formik.errors.mobile_number}
             fullWidth
           />
         </Grid>

@@ -10,6 +10,7 @@ export const transformClientFromApi = (apiClient) => {
     // Personal Details (for residential)
     first_name: apiClient.first_name || "",
     last_name: apiClient.last_name || "",
+    residential_address: apiClient.residential_address || "",
 
     // Business Information
     business_name: apiClient.business_name || "",
@@ -90,6 +91,8 @@ export const transformClientForApi = (formData) => {
       ? {
           first_name: formData.first_name,
           last_name: formData.last_name,
+          // Send residential_address for residential clients
+          residential_address: formData.residential_address,
         }
       : {}),
 
@@ -185,6 +188,6 @@ export const transformClientForApi = (formData) => {
     }
   });
 
-  console.log('Final API payload:', apiData); // Add for debugging
+  console.log("Final API payload:", apiData); // Add for debugging
   return apiData;
 };

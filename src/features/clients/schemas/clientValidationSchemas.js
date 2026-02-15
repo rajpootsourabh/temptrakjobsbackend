@@ -85,11 +85,11 @@ export const residentialClientSchema = Yup.object().shape({
   last_name: Yup.string()
     .required('Last name is required'),
   
-  residential_email: Yup.string()
+   email_address: Yup.string()
     .required('Email address is required')
     .matches(emailRegExp, "Invalid email format"),
   
-  residential_mobile: Yup.string()
+  mobile_number: Yup.string()
     .required('Mobile number is required')
     .matches(phoneRegExp, "Mobile number must be 10 digits"),
   
